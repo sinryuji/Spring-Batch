@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://sinryuji:1234@spring-batch.vpzbyau.mongodb.net/batch?retryWrites=true&w=majority
