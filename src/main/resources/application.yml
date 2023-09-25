@@ -1,4 +1,9 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://sinryuji:1234@spring-batch.vpzbyau.mongodb.net/batch?retryWrites=true&w=majority
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      database: batch
+      username: peer
+      password: peer
