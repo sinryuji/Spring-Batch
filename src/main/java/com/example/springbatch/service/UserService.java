@@ -12,8 +12,10 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-    public void save(RegisterDto registerDto) {
-        User user = new User(registerDto);
-        this.userRepository.save(user);
+    public void save() {
+        for (int i = 1; i < 101; ++i) {
+            User user = User.builder().id("test" + i).name("test" + i).password("test").build();
+            this.userRepository.save(user);
+        }
     }
 }
