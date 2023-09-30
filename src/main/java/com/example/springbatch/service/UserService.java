@@ -14,7 +14,13 @@ public class UserService {
 
     public void save() {
         for (int i = 1; i < 101; ++i) {
-            User user = User.builder().id("test" + i).name("test" + i).password("test").build();
+            User user = User.builder()
+                .id("test" + i)
+                .name("test" + i)
+                .password("test")
+                .salary(1000 * i)
+                .bonus(10 * i)
+                .build();
             this.userRepository.save(user);
         }
     }

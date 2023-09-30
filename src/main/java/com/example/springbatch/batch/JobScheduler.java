@@ -22,18 +22,18 @@ public class JobScheduler {
     private final JobLauncher jobLauncher;
     private final JobConfig jobConfig;
 
-    @Scheduled(initialDelay = 1000, fixedDelay = 3000)
-    public void runJob() {
-
-        Map<String, JobParameter> confMap = new HashMap<>();
-        confMap.put("time", new JobParameter(System.currentTimeMillis()));
-        JobParameters jobParameters = new JobParameters(confMap);
-
-        try {
-            jobLauncher.run(jobConfig.simpleJob(), jobParameters);
-        } catch (JobInstanceAlreadyCompleteException | JobExecutionAlreadyRunningException
-                 | JobParametersInvalidException | JobRestartException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    @Scheduled(initialDelay = 1000, fixedDelay = 3000000)
+//    public void runJob() {
+//
+//        Map<String, JobParameter> confMap = new HashMap<>();
+//        confMap.put("time", new JobParameter(System.currentTimeMillis()));
+//        JobParameters jobParameters = new JobParameters(confMap);
+//
+//        try {
+//            jobLauncher.run(jobConfig.simpleJob(), jobParameters);
+//        } catch (JobInstanceAlreadyCompleteException | JobExecutionAlreadyRunningException
+//                 | JobParametersInvalidException | JobRestartException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 }
